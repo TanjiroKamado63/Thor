@@ -26,7 +26,7 @@ echo 15. 15_Iris_KNN_Classifier.py
 echo 16. 16_Iris_Multiclass_Logistic_Regression.py
 echo.
 echo --- Practical PDFs (17-29) [Opens as PDF] ---
-echo 17. All_NEP_Practicals.pdf
+echo 17. All_AI_CODES.pdf
 echo 18. Jira_Practical_11.pdf
 echo 19. Jira_Practical_12.pdf
 echo 20. Jira_Practical_2_Team_Creation_Role_Assignment.pdf
@@ -68,7 +68,7 @@ if "%choice%"=="14" set "FILE=14_Diabetes_Decision_Tree_Regressor.py" & set "TYP
 if "%choice%"=="15" set "FILE=15_Iris_KNN_Classifier.py" & set "TYPE=py" & goto PROCESS
 if "%choice%"=="16" set "FILE=16_Iris_Multiclass_Logistic_Regression.py" & set "TYPE=py" & goto PROCESS
 
-if "%choice%"=="17" set "FILE=All_NEP_Practicals.pdf" & set "TYPE=pdf" & goto PROCESS
+if "%choice%"=="17" set "FILE=All_AI_CODES.pdf" & set "TYPE=pdf" & goto PROCESS
 if "%choice%"=="18" set "FILE=Jira_Practical_11.pdf" & set "TYPE=pdf" & goto PROCESS
 if "%choice%"=="19" set "FILE=Jira_Practical_12.pdf" & set "TYPE=pdf" & goto PROCESS
 if "%choice%"=="20" set "FILE=Jira_Practical_2_Team_Creation_Role_Assignment.pdf" & set "TYPE=pdf" & goto PROCESS
@@ -98,4 +98,24 @@ if "%TYPE%"=="py" (
 goto MENU
 
 :DOWNLOAD_ALL
-for
+for %%f in (
+    "01_Table_Driven_Vacuum_Agent.py"
+    "02_Eight_Puzzle_BFS.py"
+    "03_Water_Jug_DFS.py"
+    "04_Romania_Map_Uniform_Cost_Search.py"
+    "05_Eight_Puzzle_Greedy_Best_First.py"
+    "06_Bayes_Disease_Probability.py"
+    "07_Naive_Bayes_Spam_Detection.py"
+    "08_Bayesian_Network_Burglary_Alarm.py"
+    "09_Iris_SVM_Classification.py"
+    "10_Diabetes_Linear_Regression.py"
+    "11_Digit_5_Logistic_Regression.py"
+    "12_Random_Forest_KFold_Cross_Validation.py"
+    "13_Iris_Decision_Tree_Classifier.py"
+    "14_Diabetes_Decision_Tree_Regressor.py"
+    "15_Iris_KNN_Classifier.py"
+    "16_Iris_Multiclass_Logistic_Regression.py"
+    "All_AI_CODES.pdf"
+    "Jira_Practical_11.pdf"
+    "Jira_Practical_12.pdf"
+    "Jira
