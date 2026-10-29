@@ -2,9 +2,6 @@
 title AI & Jira Practical Library CLI
 color 0A
 
-:: GitHub raw base URL for your repository
-set "BASE_URL=https://raw.githubusercontent.com/TanjiroKamado63/dragon/main"
-
 :MENU
 cls
 echo ===============================================================================
@@ -54,7 +51,6 @@ set /p "choice=Enter choice (1-28, D, or Q): "
 if /i "%choice%"=="Q" exit
 if /i "%choice%"=="D" goto DOWNLOAD_ALL
 
-:: Map numbers to corresponding filenames and file types (1 = Python/Notepad, 2 = PDF)
 if "%choice%"=="1" set "FILE=01_Table_Driven_Vacuum_Agent.py" & set "TYPE=py" & goto PROCESS
 if "%choice%"=="2" set "FILE=02_Eight_Puzzle_BFS.py" & set "TYPE=py" & goto PROCESS
 if "%choice%"=="3" set "FILE=03_Water_Jug_DFS.py" & set "TYPE=py" & goto PROCESS
@@ -91,7 +87,7 @@ goto MENU
 echo.
 if not exist "%FILE%" (
     echo [+] Downloading "%FILE%" from GitHub...
-    curl -ksL "%BASE_URL%/%FILE%" -o "%FILE%"
+    curl -ksL "https://raw.githubusercontent.com/TanjiroKamado63/Thor/main/%FILE%" -o "%FILE%"
     if errorlevel 1 (
         echo [x] Failed to download "%FILE%". Check your internet or repository.
         pause
@@ -101,7 +97,6 @@ if not exist "%FILE%" (
     echo [i] File already exists locally. Opening...
 )
 
-:: Open based on file type
 if "%TYPE%"=="py" (
     start notepad "%FILE%"
 ) else (
@@ -145,7 +140,7 @@ for %%f in (
 ) do (
     if not exist %%f (
         echo Downloading: %%f
-        curl -ksL "%BASE_URL%/%%f" -o %%f
+        curl -ksL "https://raw.githubusercontent.com/TanjiroKamado63/Thor/main/%%f" -o %%f
     )
 )
 echo.
